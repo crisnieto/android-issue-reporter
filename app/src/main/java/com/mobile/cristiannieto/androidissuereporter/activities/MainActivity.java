@@ -1,6 +1,7 @@
-package com.mobile.cristiannieto.androidissuereporter;
+package com.mobile.cristiannieto.androidissuereporter.activities;
 
 import android.content.Context;
+import android.content.Intent;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -10,9 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import java.io.File;
-import java.io.FileInputStream;
-import java.io.InputStream;
+import com.mobile.cristiannieto.androidissuereporter.IssueSender;
+import com.mobile.cristiannieto.androidissuereporter.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -41,5 +41,13 @@ public class MainActivity extends AppCompatActivity {
         }catch(NullPointerException e){
             Log.d("BOTON","Error en la interacción con el boton: " + e.toString());
         }
+        Button test_image_upload = (Button) findViewById(R.id.button_upload_image);
+        test_image_upload.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this,UploadActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }
