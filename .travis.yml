@@ -24,4 +24,5 @@ branches:
         - master
 
 script:
+    - android update sdk --no-ui --all --filter build-tools-23.0.3,android-23,extra-android-m2repository
     - ./gradlew test
