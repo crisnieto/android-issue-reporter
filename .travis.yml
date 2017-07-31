@@ -1,0 +1,15 @@
+sudo: required
+dist: precise
+group: edge
+
+language: android
+
+jdk: oraclejdk8
+
+branches:
+    only:
+        - develop
+        - master
+
+script:
+    - bash "./gradlew test"
