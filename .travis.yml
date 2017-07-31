@@ -9,8 +9,14 @@ jdk: oraclejdk8
 android:
   components:
     - tools
-    - build-tools
     - platform-tools
+    - tools
+
+    - build-tools-23.0.3
+    - android-23
+    - extra-google-m2repository
+    - extra-android-m2repository
+
 
 licenses:
     - 'android-sdk-preview-license-.+'
@@ -24,5 +30,4 @@ branches:
         - master
 
 script:
-    - android update sdk --no-ui --all --filter build-tools-23.0.3,android-23,extra-android-m2repository
     - ./gradlew test
