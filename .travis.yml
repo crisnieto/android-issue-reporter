@@ -12,6 +12,12 @@ android:
     - build-tools
     - platform-tools
 
+licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+
+
 branches:
     only:
         - develop
