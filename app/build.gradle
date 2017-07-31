@@ -4,6 +4,13 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.3"
 
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+
+
+
     defaultConfig {
         applicationId "com.mobile.cristiannieto.androidissuereporter"
         minSdkVersion 15
@@ -28,7 +35,6 @@ dependencies {
     compile 'com.android.support:multidex:1.0.0'
     compile 'org.apache.httpcomponents:httpclient:4.5'
     compile 'org.yaml:snakeyaml:1.12'
-    compile files('E:/Proyectos/android-issue-reporter/libs/org.eclipse.egit.github.core-2.1.5.jar')
     compile 'com.amazonaws:aws-android-sdk-s3:2.2.+'
     compile "commons-io:commons-io:+"
 }

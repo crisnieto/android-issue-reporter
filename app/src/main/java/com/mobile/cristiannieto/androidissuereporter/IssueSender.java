@@ -37,6 +37,7 @@ public class IssueSender {
     }
 
     public String postApi(Context appContext, String title, String description) {
+        /*
         JSONObject urlParameters = getJson(title, description);
         int timeout = 5000;
         URL url;
@@ -96,6 +97,8 @@ public class IssueSender {
             }
         }
         Log.e("API", "Retorno Null");
+                */
+
         return null;
     }
 
