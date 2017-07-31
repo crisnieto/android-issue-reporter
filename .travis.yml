@@ -1,0 +1,33 @@
+sudo: required
+dist: precise
+group: edge
+
+language: android
+
+jdk: oraclejdk8
+
+android:
+  components:
+    - tools
+    - platform-tools
+    - tools
+
+    - build-tools-23.0.3
+    - android-23
+    - extra-google-m2repository
+    - extra-android-m2repository
+
+
+licenses:
+    - 'android-sdk-preview-license-.+'
+    - 'android-sdk-license-.+'
+    - 'google-gdk-license-.+'
+
+
+branches:
+    only:
+        - develop
+        - master
+
+script:
+    - ./gradlew test
